@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1350">
+    <title>4season</title>
+    <link href="img/ddddd-1.png" rel="icon" type="image/png" sizes="32x32">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/path/to/parallax.js"></script>
+
+    <!--aos CDN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="4season.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //처음들어갔을때 모습 만들기...
+            $(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+            $("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+            $(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+            //On Click Event
+            $("ul.tabs li").click(function () {
+
+                $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+                $(".tab_content").hide(); //모든 contents들 숨김
+
+                var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+                /*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+                .find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.
+                아이디 값을 찾아서 넣어줌.*/
+                $(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+                //탭버튼을 눌렀을때, 내용이 깜빡이면서 나타는게 싫다면, fadeIn을 show로 변경하면 해당부분이 수정된다.
+                return false;
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="back_min">
+        <div class="margin_min1">
+            <h1 class="mim_h1"> <a href="https://parksanghyun123.github.io/4season/"> <img src="img/logo.png"
+                        alt=""></a> </h1>
+            <ul class="min_ul1">
+                <li><a href="https://parksanghyun123.github.io/4season_ABOUT/">ABOUT</a></li>
+                <li><a href="https://parksanghyun123.github.io/4season_MENU/">MENU</a></li>
+                <li><a href="https://parksanghyun123.github.io/4season_NOTICE/">NOTICE</a></li>
+                <li><a href="https://parksanghyun123.github.io/4season_STORE/">STORE</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+    <div class="min_ber">
+        <h1>The best service is ready and waiting for you.
+        </h1>
+        <img src="img/min.jpg" alt="">
+
+
+    </div>
+    <!--mb E-->
+
+
+    <div class="about_margin">
+        <h1 class="about_h1a">STORE</h1>
+        <h1 class="about_h1b">we are everywhere</h1>
+        <img src="img/sin.png" alt="">
+
+    </div>
+    <div class="clear"></div>
+    <div class="store_no1">
+        <!--1. 구조와 class의 이름을 알맞게 넣어준다.-->
+        <div class="swiper mb">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/im3.jpg" alt="메인배너1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/im2.jpg" alt="메인배너2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/im1.jpg" alt="메인배너3">
+                </div>
+            </div>
+
+
+
+            <!-- 페이지네이션(밑에 동그라미) 추가 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--mb E-->
+        <h1 class="store_no1_h1">4시즌 시부야 카페</h1>
+        <p class="store_no1_p1">
+            4시즌의 시부야 카페는 번화한 도심 지역에서 도보로 가까운 거리에 있습니다. <br>
+            두 공원 사이에 위치한 도심 속 휴양지로 디자인된 인테리어는<br>
+            저희 스튜디오에서 제작한 두 번째 블루보틀 커피입니다.
+        </p>
+
+    </div>
+
+    <div class="cliear"></div>
+
+    <div class="stor_bre">
+        <div class="stor_bre_margin">
+            <ul>
+                <li>
+                    <img src="img/aa85005f8df7635bd9376286b858c846ba-4500x3000.png" alt="">
+                    <h1 class="stor_bre_margin_h1">4시즌 성수 카페</h1>
+                    <p class="stor_bre_margin_p1">서울특별시 성동구 야찬산로 7</p>
+                </li>
+
+                <li>
+                    <img src="img/bbbbd6b850270a0bc8ae0b90efffb06127f4a3a38-2000x10521.png" alt="">
+                    <h1 class="stor_bre_margin_h1">4시즌 삼청 카페</h1>
+                    <p class="stor_bre_margin_p1">서울 종로구 북촌로5길 76</p>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="clear"></div>
+    <div class="footer">
+        <img src="img/logo2.png" alt="#" class="footer_img1">
+        <div class="footer_text">
+            <div class="footer_ul1">
+                <ul>
+                    <li><a href="https://parksanghyun123.github.io/4season_ABOUT/">ABOUT</a></li>
+                    <li><a href="https://parksanghyun123.github.io/4season_MENU/">MENU</a></li>
+                    <li><a href="https://parksanghyun123.github.io/4season_NOTICE/">NOTICE</a></li>
+                    <li><a href="https://parksanghyun123.github.io/4season_STORE/">STORE</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_ul1" id="footer_ul1a">
+                <ul class="footer_idul1">
+                    <li class="footer_ul2"><a href="#">02-246-1650</a></li>
+                    <li class="footer_ul2"><a href="#">010-3099-6235</a></li>
+                    <li class="footer_ul2"><a href="#">4season@naver.com</a></li>
+                    <li class="footer_ul2">Change location and language Korea - Korean</li>
+                </ul>
+
+            </div>
+            <div class="footer_ul1">
+                <ul class="footer_ul3">
+                    <li><a href="#"><img src="img/11ifon.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/ifon2.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/ifin3.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--3. 필수 옵션을 넣는 script부분을 body가장 끝에 넣어준다.-->
+    <!-- Initialize Swiper -->
+    <!--옵션부분 pdf파일 참조해주세요-->
+    <script>
+
+        var swiper = new Swiper(".mb", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+
+        });
+
+
+
+
+    </script>
